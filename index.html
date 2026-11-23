@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Illuminated Resin Block Chandelier — Design Project</title>
+
+  <!-- Google Fonts: Modern, elegant typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Fallback: ensure all elements are visible if JavaScript is turned off -->
+  <noscript>
+    <style>
+      .fade-in-element {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    </style>
+  </noscript>
+</head>
+<body>
+
+  <!-- ========================================================
+       STICKY TOP NAVIGATION BAR
+       Stays at the top of the screen while you scroll.
+       ======================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      
+      <!-- Brand Logo / Project Title -->
+      <a href="#hero" class="brand">
+        <span class="brand-dot"></span>
+        <span class="brand-text">Resin Chandelier</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-menu" id="navMenu">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#making" class="nav-link">How It Is Made</a>
+        <a href="#calculator" class="nav-link">Size & Calculator</a>
+        <a href="#concept" class="nav-link">Design Board</a>
+      </nav>
+
+      <!-- Glow Mood Switcher (Amber Glow vs Cyan Glow) -->
+      <div class="nav-actions">
+        <button id="glowToggleBtn" class="glow-toggle-btn" title="Toggle Light Mood: Warm Amber or Soft Blue">
+          <span class="toggle-icon">✨</span>
+          <span class="toggle-label">Glow: Warm Amber</span>
+        </button>
+
+        <!-- Mobile Menu Toggle Button (Hamburger) -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- ========================================================
+       SECTION 1: HERO
+       First thing visitors see with animated glowing 2-ring chandelier.
+       ======================================================== -->
+  <section class="hero-section" id="hero">
+    
+    <!-- Background Ambient Glow Orbs -->
+    <div class="ambient-glow glow-top-left"></div>
+    <div class="ambient-glow glow-bottom-right"></div>
+
+    <div class="container hero-container">
+      
+      <!-- Left Column: Hero Text Content -->
+      <div class="hero-content fade-in-element">
+        <div class="pill-badge">
+          <span class="badge-dot"></span>
+          Industrial Design & Craft
+        </div>
+        
+        <h1 class="hero-title">
+          Illuminated Resin <br />
+          <span class="gradient-text">Block Chandelier</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          A modern two-ring chandelier of glowing resin blocks, made with 3D printing, CNC and moulding.
+        </p>
+
+        <!-- Quick Summary Badges -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">2</span>
+            <span class="stat-label">Concentric Rings</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">45–52</span>
+            <span class="stat-label">Cast Resin Blocks</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Fabrication Methods</span>
+          </div>
+        </div>
+
+        <!-- Call to Action Buttons -->
+        <div class="hero-buttons">
+          <a href="#about" class="btn btn-primary">
+            <span>Explore The Project</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#calculator" class="btn btn-secondary">
+            <span>Block Calculator</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Animated CSS Two-Ring Chandelier Illustration -->
+      <div class="hero-visual fade-in-element">
+        <div class="chandelier-stage" id="chandelierStage">
+          
+          <!-- Ceiling Hook & Suspension Cord -->
+          <div class="ceiling-hook"></div>
+          <div class="suspension-wire central-wire"></div>
+          
+          <!-- Diagonal Support Wires -->
+          <div class="support-wires">
+            <span class="wire wire-1"></span>
+            <span class="wire wire-2"></span>
+            <span class="wire wire-3"></span>
+            <span class="wire wire-4"></span>
+          </div>
+
+          <!-- Central Light Bulb Core that diffuses light -->
+          <div class="light-core">
+            <div class="core-bulb"></div>
+            <div class="core-glow-aura"></div>
+          </div>
+
+          <!-- 3D Perspective Rig for the Two Rings -->
+          <div class="rings-rig">
+            
+            <!-- OUTER RING (60 cm) -->
+            <div class="ring-structure ring-outer">
+              <div class="frame-hoop hoop-outer"></div>
+              
+              <!-- Glowing resin blocks distributed around outer ring -->
+              <div class="blocks-layer outer-blocks">
+                <div class="resin-tile tile-amber t-1" style="--angle: 0deg;"></div>
+                <div class="resin-tile tile-blue t-2" style="--angle: 30deg;"></div>
+                <div class="resin-tile tile-amber t-3" style="--angle: 60deg;"></div>
+                <div class="resin-tile tile-amber t-4" style="--angle: 90deg;"></div>
+                <div class="resin-tile tile-blue t-5" style="--angle: 120deg;"></div>
+                <div class="resin-tile tile-amber t-6" style="--angle: 150deg;"></div>
+                <div class="resin-tile tile-amber t-7" style="--angle: 180deg;"></div>
+                <div class="resin-tile tile-blue t-8" style="--angle: 210deg;"></div>
+                <div class="resin-tile tile-amber t-9" style="--angle: 240deg;"></div>
+                <div class="resin-tile tile-blue t-10" style="--angle: 270deg;"></div>
+                <div class="resin-tile tile-amber t-11" style="--angle: 300deg;"></div>
+                <div class="resin-tile tile-amber t-12" style="--angle: 330deg;"></div>
+              </div>
+            </div>
+
+            <!-- INNER RING (40 cm, hangs slightly lower or inside) -->
+            <div class="ring-structure ring-inner">
+              <div class="frame-hoop hoop-inner"></div>
+
+              <!-- Glowing resin blocks distributed around inner ring -->
+              <div class="blocks-layer inner-blocks">
+                <div class="resin-tile tile-amber ti-1" style="--angle: 15deg;"></div>
+                <div class="resin-tile tile-blue ti-2" style="--angle: 60deg;"></div>
+                <div class="resin-tile tile-amber ti-3" style="--angle: 105deg;"></div>
+                <div class="resin-tile tile-amber ti-4" style="--angle: 150deg;"></div>
+                <div class="resin-tile tile-blue ti-5" style="--angle: 195deg;"></div>
+                <div class="resin-tile tile-amber ti-6" style="--angle: 240deg;"></div>
+                <div class="resin-tile tile-amber ti-7" style="--angle: 285deg;"></div>
+                <div class="resin-tile tile-blue ti-8" style="--angle: 330deg;"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Interactive Caption Hint -->
+          <div class="stage-caption">
+            <span class="sparkle-icon">✦</span>
+            Interactive CSS 2-Ring Model · Hover to pause rotation
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       SECTION 2: ABOUT THE PROJECT
+       Simple story, key characteristics, and visual resin cards.
+       ======================================================== -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      
+      <div class="section-header text-center fade-in-element">
+        <span class="section-tag">Overview</span>
+        <h2 class="section-title">About the Project</h2>
+        <div class="section-rule"></div>
+      </div>
+
+      <div class="about-grid">
+        
+        <!-- Left: Project Narrative Card -->
+        <div class="about-story-card fade-in-element">
+          <div class="quote-accent">“</div>
+          <p class="about-lead">
+            This chandelier is made of small glowing blocks of resin, a liquid plastic that turns hard when it dries. The blocks are arranged in two rings, one big and one small.
+          </p>
+          <p class="about-body">
+            First, one model block is made on a 3D printer. That model is used to make a rubber mould, and resin is poured into the mould again and again to make all the blocks. The frame that holds the blocks is cut by a CNC machine, which is a computer-controlled cutting machine. A light in the middle makes the blocks glow, so the whole chandelier shines softly.
+          </p>
+
+          <div class="feature-highlights">
+            <div class="highlight-item">
+              <div class="highlight-icon">✨</div>
+              <div>
+                <strong>Diffused Internal Glow</strong>
+                <span>Frosted block surfaces soften the central lamp into a warm, gentle ambient halo.</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">🪐</div>
+              <div>
+                <strong>Two Concentric Rings</strong>
+                <span>60 cm outer ring and 40 cm inner ring provide rich dimensional layering.</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">🛠️</div>
+              <div>
+                <strong>Hybrid Craft & Tech</strong>
+                <span>Blends digital 3D printing and CNC machining with silicone casting.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Resin Block Material Showcase (CSS Glowing Placeholders) -->
+        <div class="about-visual-card fade-in-element">
+          
+          <div class="card-glass-header">
+            <div class="traffic-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <span class="card-caption">Material & Light Behavior</span>
+          </div>
+
+          <div class="resin-showcase-container">
+            
+            <!-- Glowing Resin Block Placeholder 1: Amber Glow -->
+            <div class="block-preview-box amber-preview">
+              <div class="resin-block-simulation">
+                <div class="simulation-shimmer"></div>
+                <div class="simulation-core"></div>
+              </div>
+              <div class="block-details">
+                <span class="block-tag">Warm Amber Resin</span>
+                <h4>Polished Face · Frosted Back</h4>
+                <p>Front side polished for crystal reflections; rear side frosted to diffuse raw LED hot-spots.</p>
+              </div>
+            </div>
+
+            <!-- Glowing Resin Block Placeholder 2: Soft Blue Accent -->
+            <div class="block-preview-box blue-preview">
+              <div class="resin-block-simulation blue-sim">
+                <div class="simulation-shimmer"></div>
+                <div class="simulation-core"></div>
+              </div>
+              <div class="block-details">
+                <span class="block-tag tag-blue">Soft Azure Resin</span>
+                <h4>Subtle Chromatic Accents</h4>
+                <p>Interspersed cool blue blocks create a tranquil contrast against warm golden amber rays.</p>
+              </div>
+            </div>
+
+            <!-- Helpful Beginner Note for Photos -->
+            <div class="photo-placeholder-note">
+              <span class="note-icon">📷</span>
+              <div class="note-text">
+                <strong>Photo Placeholder Notice:</strong>
+                <p>These glowing blocks are rendered with pure CSS. You can easily replace them with real workshop photos in <code>index.html</code>!</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       SECTION 3: HOW IT IS MADE (Step-by-Step Cards)
+       Clear cards with custom icons, explanations, and placeholder slots.
+       ======================================================== -->
+  <section class="section making-section" id="making">
+    <div class="container">
+      
+      <div class="section-header text-center fade-in-element">
+        <span class="section-tag">Fabrication Process</span>
+        <h2 class="section-title">How It Is Made</h2>
+        <p class="section-subtitle">A step-by-step walkthrough of turning liquid resin and raw sheet into a floating luminaire.</p>
+        <div class="section-rule"></div>
+      </div>
+
+      <!-- Step Cards Grid -->
+      <div class="steps-grid">
+
+        <!-- ================= STEP 1 ================= -->
+        <div class="step-card fade-in-element">
+          <div class="step-top">
+            <span class="step-badge">Step 01</span>
+            <div class="step-icon">
+              <!-- 3D Printer Icon -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9V2h12v7"/>
+                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+                <path d="M6 14h12v8H6z"/>
+              </svg>
+            </div>
+          </div>
+          
+          <h3 class="step-title">3D Printing</h3>
+          <p class="step-desc">
+            Print one model block (the <strong>"master"</strong>) and precision alignment guides (<strong>jigs</strong>) to help line everything up accurately during assembly.
+          </p>
+
+          <!-- Visual Placeholder: 3D Master Model -->
+          <div class="step-visual">
+            <div class="placeholder-box">
+              <!-- 
+                ==========================================================
+                PHOTO TIP FOR BEGINNERS:
+                To use your own photo instead of this CSS graphic, 
+                comment out the div below and add:
+                <img src="images/step1-3dprint.jpg" alt="3D Printed Master Block" class="step-real-img" />
+                ==========================================================
+              -->
+              <div class="css-illustration-3d">
+                <div class="cube-wireframe">
+                  <div class="face f-front">Master Block</div>
+                  <div class="face f-top"></div>
+                  <div class="face f-right"></div>
+                </div>
+                <span class="visual-label">3D Printed Master & Alignment Jigs</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-footer">
+            <span class="step-tag">Tool: FDM / SLA 3D Printer</span>
+          </div>
+        </div>
+
+        <!-- ================= STEP 2 ================= -->
+        <div class="step-card fade-in-element">
+          <div class="step-top">
+            <span class="step-badge">Step 02</span>
+            <div class="step-icon">
+              <!-- Moulding / Resin Pour Icon -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+              </svg>
+            </div>
+          </div>
+
+          <h3 class="step-title">Moulding & Casting</h3>
+          <p class="step-desc">
+            Make flexible silicone rubber moulds from the 3D-printed master, then mix and pour <strong>deep-pour epoxy resin</strong> into the moulds repeatedly to cast all the blocks.
+          </p>
+
+          <!-- Visual Placeholder: Silicone Mould & Liquid Resin -->
+          <div class="step-visual">
+            <div class="placeholder-box">
+              <!-- 
+                ==========================================================
+                PHOTO TIP: Replace with <img src="images/step2-mould.jpg">
+                ==========================================================
+              -->
+              <div class="css-illustration-mould">
+                <div class="mould-box">
+                  <div class="mould-rubber">
+                    <div class="liquid-resin-fill">
+                      <span class="pour-drips"></span>
+                    </div>
+                  </div>
+                </div>
+                <span class="visual-label">Silicone Mould + Deep-Pour Resin</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-footer">
+            <span class="step-tag">Material: Platinum Silicone & Epoxy</span>
+          </div>
+        </div>
+
+        <!-- ================= STEP 3 ================= -->
+        <div class="step-card fade-in-element">
+          <div class="step-top">
+            <span class="step-badge">Step 03</span>
+            <div class="step-icon">
+              <!-- CNC Cutter Icon -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="m4.93 4.93 4.24 4.24"/>
+                <path d="m14.83 9.17 4.24-4.24"/>
+                <path d="m14.83 14.83 4.24 4.24"/>
+                <path d="m9.17 14.83-4.24 4.24"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </div>
+          </div>
+
+          <h3 class="step-title">CNC Frame Milling</h3>
+          <p class="step-desc">
+            Cut the two rings of the frame using a <strong>CNC machine</strong> (computer-controlled cutting tool), milling precision pockets to seat the blocks and spokes to mount the central light.
+          </p>
+
+          <!-- Visual Placeholder: Dual Concentric CNC Rings -->
+          <div class="step-visual">
+            <div class="placeholder-box">
+              <!-- 
+                ==========================================================
+                PHOTO TIP: Replace with <img src="images/step3-cnc.jpg">
+                ==========================================================
+              -->
+              <div class="css-illustration-cnc">
+                <div class="cnc-frame-preview">
+                  <div class="cnc-ring outer-cnc"></div>
+                  <div class="cnc-ring inner-cnc"></div>
+                  <div class="cnc-spoke sp-1"></div>
+                  <div class="cnc-spoke sp-2"></div>
+                </div>
+                <span class="visual-label">Milled Pockets & Radial Spokes</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-footer">
+            <span class="step-tag">Tool: CNC Router / Laser Cutter</span>
+          </div>
+        </div>
+
+        <!-- ================= STEP 4 ================= -->
+        <div class="step-card fade-in-element">
+          <div class="step-top">
+            <span class="step-badge">Step 04</span>
+            <div class="step-icon">
+              <!-- Sanding / Sparkle Polish Icon -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3z"/>
+              </svg>
+            </div>
+          </div>
+
+          <h3 class="step-title">Sanding & Finishing</h3>
+          <p class="step-desc">
+            Sand and polish each block individually: keep a <strong>frosted matte back</strong> for soft diffused internal glow, and buff the <strong>front face to high polish</strong> for crystal shine.
+          </p>
+
+          <!-- Visual Placeholder: Frosted vs Polished Surfaces -->
+          <div class="step-visual">
+            <div class="placeholder-box">
+              <!-- 
+                ==========================================================
+                PHOTO TIP: Replace with <img src="images/step4-finishing.jpg">
+                ==========================================================
+              -->
+              <div class="css-illustration-finish">
+                <div class="finish-split-block">
+                  <div class="finish-half frosted-half">
+                    <span>Frosted Back</span>
+                  </div>
+                  <div class="finish-half polished-half">
+                    <span>Polished Face</span>
+                    <span class="sparkle-dot">✦</span>
+                  </div>
+                </div>
+                <span class="visual-label">Dual Finish: Diffuse + Reflect</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-footer">
+            <span class="step-tag">Process: 400 to 2000 Grit & Buffing</span>
+          </div>
+        </div>
+
+        <!-- ================= STEP 5 ================= -->
+        <div class="step-card step-card-wide fade-in-element">
+          <div class="step-top">
+            <span class="step-badge">Step 05</span>
+            <div class="step-icon">
+              <!-- Chandelier Assembly Icon -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v6"/>
+                <path d="M5 8h14"/>
+                <path d="M6 8l2 8h8l2-8"/>
+                <circle cx="12" cy="18" r="3"/>
+                <path d="M12 21v2"/>
+              </svg>
+            </div>
+          </div>
+
+          <h3 class="step-title">Final Assembly & Hanging</h3>
+          
+          <div class="step-body-split">
+            <div>
+              <p class="step-desc">
+                Fit the finished resin blocks securely into the CNC frame pockets, wire up the central light fixture, test the warm internal glow, and suspend the complete chandelier from a strong ceiling hook.
+              </p>
+              <div class="step-highlights-list">
+                <span class="step-pill">✦ Tension-balanced hanging cables</span>
+                <span class="step-pill">✦ Central diffused LED bulb mounting</span>
+                <span class="step-pill">✦ 360° even ambient glow</span>
+              </div>
+            </div>
+
+            <!-- Visual Placeholder: Complete Assembly -->
+            <div class="step-visual">
+              <div class="placeholder-box">
+                <!-- 
+                  ==========================================================
+                  PHOTO TIP: Replace with <img src="images/step5-assembly.jpg">
+                  ==========================================================
+                -->
+                <div class="css-illustration-assembly">
+                  <div class="assembly-rig">
+                    <span class="hanging-cable"></span>
+                    <div class="mini-assembled-chandelier">
+                      <span class="glow-disc"></span>
+                    </div>
+                  </div>
+                  <span class="visual-label">Suspension Cables, Light Fitting & Structural Testing</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-footer">
+            <span class="step-tag">Completed: Two-Ring Illuminated Chandelier</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       SECTION 4: SIZE AND BLOCK COUNT & INTERACTIVE CALCULATOR
+       Clear breakdown of Option A vs Option B with live formula calculator.
+       ======================================================== -->
+  <section class="section calculator-section" id="calculator">
+    <div class="container">
+      
+      <div class="section-header text-center fade-in-element">
+        <span class="section-tag">Specifications & Engineering</span>
+        <h2 class="section-title">Size and Block Count</h2>
+        <p class="section-subtitle">
+          Determine how many resin blocks fit around the two rings and calculate the total weight.
+        </p>
+        <div class="section-rule"></div>
+      </div>
+
+      <!-- Formula Explanation Banner -->
+      <div class="formula-banner fade-in-element">
+        <div class="formula-icon">📐</div>
+        <div class="formula-content">
+          <h4>The Circumference Sizing Formula</h4>
+          <div class="formula-code">
+            <code>Blocks per ring = (3.14 × Ring Diameter) ÷ (Block Width + Gap)</code>
+          </div>
+          <p>
+            Ring sizes: <strong>Outer ring ≈ 60 cm</strong> diameter &nbsp;|&nbsp; <strong>Inner ring ≈ 40 cm</strong> diameter.
+          </p>
+        </div>
+      </div>
+
+      <!-- Quick Preset Comparison Cards -->
+      <div class="options-comparison-grid fade-in-element">
+        
+        <!-- OPTION A CARD -->
+        <div class="option-card" id="cardOptionA">
+          <div class="option-header">
+            <div>
+              <span class="option-letter">Option A</span>
+              <h3 class="option-name">5 × 5 × 5 cm Cubes</h3>
+            </div>
+            <span class="option-badge heavy-badge">Heavy & Bold</span>
+          </div>
+
+          <ul class="option-specs">
+            <li><strong>Block Size:</strong> 5 cm width × 5 cm height × 5 cm depth</li>
+            <li><strong>Spacing Gap:</strong> 1 cm between blocks</li>
+            <li><strong>Outer Ring (60 cm):</strong> 31 blocks</li>
+            <li><strong>Inner Ring (40 cm):</strong> 21 blocks</li>
+            <li class="spec-highlight">
+              <strong>Total Blocks:</strong> 52 blocks
+            </li>
+            <li class="spec-weight">
+              <strong>Estimated Weight:</strong> ≈ 8.0 kg of resin
+            </li>
+          </ul>
+
+          <button class="btn btn-preset" id="selectOptionABtn">
+            Load Option A into Calculator
+          </button>
+        </div>
+
+        <!-- OPTION B CARD (RECOMMENDED) -->
+        <div class="option-card featured-option" id="cardOptionB">
+          <div class="recommended-ribbon">Recommended</div>
+          <div class="option-header">
+            <div>
+              <span class="option-letter">Option B</span>
+              <h3 class="option-name">6 × 6 × 2.5 cm Tiles</h3>
+            </div>
+            <span class="option-badge light-badge">Lighter & Brighter</span>
+          </div>
+
+          <ul class="option-specs">
+            <li><strong>Block Size:</strong> 6 cm width × 6 cm height × 2.5 cm depth</li>
+            <li><strong>Spacing Gap:</strong> 1 cm between blocks</li>
+            <li><strong>Outer Ring (60 cm):</strong> 27 blocks</li>
+            <li><strong>Inner Ring (40 cm):</strong> 18 blocks</li>
+            <li class="spec-highlight">
+              <strong>Total Blocks:</strong> 45 blocks
+            </li>
+            <li class="spec-weight">
+              <strong>Estimated Weight:</strong> ≈ 5.0 kg of resin
+            </li>
+          </ul>
+
+          <div class="why-recommended">
+            <strong>Why Recommended:</strong> 3 kg lighter (~38% less strain on ceiling mounts) and 2.5 cm depth allows superior light transmission and easier casting without overheating.
+          </div>
+
+          <button class="btn btn-preset active" id="selectOptionBBtn">
+            Option B Selected (Active)
+          </button>
+        </div>
+
+      </div>
+
+
+      <!-- ================= INTERACTIVE CALCULATOR ================= -->
+      <div class="calculator-app-card fade-in-element">
+        <div class="app-card-header">
+          <div class="app-title-group">
+            <span class="app-icon">🧮</span>
+            <div>
+              <h3>Interactive Block Count & Weight Calculator</h3>
+              <p>Adjust dimensions below or test custom sizes in real time</p>
+            </div>
+          </div>
+          <button class="btn-reset" id="resetCalcBtn" title="Reset to Option B defaults">
+            Reset to Option B
+          </button>
+        </div>
+
+        <div class="calculator-layout">
+          
+          <!-- Controls Column -->
+          <div class="calc-controls">
+            
+            <!-- Outer Ring Diameter -->
+            <div class="control-group">
+              <div class="control-label-row">
+                <label for="outerDiameter">Outer Ring Diameter</label>
+                <span class="val-display" id="outerDiameterVal">60 cm</span>
+              </div>
+              <input type="range" id="outerDiameter" min="30" max="100" step="1" value="60" />
+            </div>
+
+            <!-- Inner Ring Diameter -->
+            <div class="control-group">
+              <div class="control-label-row">
+                <label for="innerDiameter">Inner Ring Diameter</label>
+                <span class="val-display" id="innerDiameterVal">40 cm</span>
+              </div>
+              <input type="range" id="innerDiameter" min="20" max="80" step="1" value="40" />
+            </div>
+
+            <!-- Block Width -->
+            <div class="control-group">
+              <div class="control-label-row">
+                <label for="blockWidth">Block Width</label>
+                <span class="val-display" id="blockWidthVal">6 cm</span>
+              </div>
+              <input type="range" id="blockWidth" min="3" max="10" step="0.5" value="6" />
+            </div>
+
+            <!-- Block Depth / Thickness -->
+            <div class="control-group">
+              <div class="control-label-row">
+                <label for="blockDepth">Block Depth (Thickness)</label>
+                <span class="val-display" id="blockDepthVal">2.5 cm</span>
+              </div>
+              <input type="range" id="blockDepth" min="1.5" max="8" step="0.5" value="2.5" />
+            </div>
+
+            <!-- Gap Between Blocks -->
+            <div class="control-group">
+              <div class="control-label-row">
+                <label for="blockGap">Gap Between Blocks</label>
+                <span class="val-display" id="blockGapVal">1.0 cm</span>
+              </div>
+              <input type="range" id="blockGap" min="0.5" max="3" step="0.1" value="1.0" />
+            </div>
+
+          </div>
+
+          <!-- Live Output Column -->
+          <div class="calc-results">
+            
+            <div class="results-grid">
+              
+              <div class="result-box">
+                <span class="res-label">Outer Ring (60 cm)</span>
+                <div class="res-value" id="resOuterCount">27</div>
+                <span class="res-sub">blocks required</span>
+              </div>
+
+              <div class="result-box">
+                <span class="res-label">Inner Ring (40 cm)</span>
+                <div class="res-value" id="resInnerCount">18</div>
+                <span class="res-sub">blocks required</span>
+              </div>
+
+              <div class="result-box highlight-box">
+                <span class="res-label">Total Blocks</span>
+                <div class="res-value total-count" id="resTotalCount">45</div>
+                <span class="res-sub">mould castings needed</span>
+              </div>
+
+              <div class="result-box highlight-box weight-box">
+                <span class="res-label">Estimated Resin Weight</span>
+                <div class="res-value weight-count" id="resWeight">≈ 5.0 kg</div>
+                <span class="res-sub">based on 1.12 g/cm³ density</span>
+              </div>
+
+            </div>
+
+            <!-- Live Ring Visualizer Indicator -->
+            <div class="visualizer-container">
+              <span class="vis-label">Live Spacing Preview:</span>
+              <div class="vis-rings-preview" id="visRingsPreview">
+                <div class="vis-ring-outer" id="visOuterRing">
+                  <div class="vis-ring-inner" id="visInnerRing">
+                    <span class="vis-center-bulb"></span>
+                  </div>
+                </div>
+              </div>
+              <p class="vis-feedback" id="visFeedback">
+                Perfect proportions: 45 blocks create an airy, balanced aesthetic without overcrowding.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       SECTION 5: DESIGN BOARD & MOODBOARD
+       Shows the user's uploaded concept board alongside notes.
+       ======================================================== -->
+  <section class="section concept-section" id="concept">
+    <div class="container">
+      
+      <div class="section-header text-center fade-in-element">
+        <span class="section-tag">Visual Inspiration</span>
+        <h2 class="section-title">Design Concept Board</h2>
+        <p class="section-subtitle">Sketches, chandelier mood references, and physical illuminated resin studies.</p>
+        <div class="section-rule"></div>
+      </div>
+
+      <div class="concept-board-card fade-in-element">
+        
+        <div class="board-frame">
+          <!-- The user's uploaded concept board image -->
+          <img 
+            src="images/concept-board.jpg" 
+            onerror="this.onerror=null; this.src='concept-board.jpg';"
+            alt="Design sketches and moodboard for the illuminated resin block chandelier" 
+            class="concept-board-img"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="board-caption-box">
+          <div class="board-caption-header">
+            <h4>Concept Board Highlights</h4>
+            <span class="board-tag">Initial Prototype Research</span>
+          </div>
+          <p>
+            The concept combines delicate golden wire suspension with tiered rings of amber and sea-glass blue resin tiles. Internal light penetrates each block, casting warm radial shadows across the ceiling while creating a cozy, diffused glow throughout the room.
+          </p>
+          
+          <div class="board-meta-items">
+            <span class="meta-item">✦ 2-Tier Suspension</span>
+            <span class="meta-item">✦ Botanical / Pigment Resin Options</span>
+            <span class="meta-item">✦ Soft Optical Diffusion</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       FOOTER
+       Clean, minimal, with friendly beginner credits.
+       ======================================================== -->
+  <footer class="footer">
+    <div class="container footer-container">
+      
+      <div class="footer-brand">
+        <div class="brand">
+          <span class="brand-dot"></span>
+          <span class="brand-text">Illuminated Resin Chandelier</span>
+        </div>
+        <p class="footer-sub">
+          Design project exploration in 3D printing, CNC machining and deep-pour epoxy resin.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#hero">Back to Top ↑</a>
+        <a href="#about">About</a>
+        <a href="#making">Process</a>
+        <a href="#calculator">Calculator</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom text-center">
+      <p>© 2026 Illuminated Resin Block Chandelier · Built with pure HTML, CSS & JavaScript</p>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
